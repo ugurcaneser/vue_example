@@ -5,29 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>VueJS Example</title>
-
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
+  
   <div id="app">
     <h3>{{ title }}</h3>
     <button>{{ buttonTitle }}</button>
+    <p>{{ paragraph }}</p>
+    <a v-bind:href="link" v-bind:data-id="dataId">Lorem</a>
   </div>
-  
-  <script>
-    new Vue({
-      el: '#app',
-      data: {
-        title: "Test Header",
-        buttonTitle: "Click & Go!"
-      }
-    });
 
+  <div id="app2">
+    <span v-if="seen">Now you can see me!</span>
+  </div>
 
-
-
-
-  </script>
-
+  <script src="app.js"></script>
 </body>
 </html>
