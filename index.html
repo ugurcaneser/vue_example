@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>VueJS Example</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Simple Vue Examples</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
+
 <body>
-  
-  <div id="app">
-    <h3>{{ title }}</h3>
-    <button>{{ buttonTitle }}</button>
-    <p>{{ paragraph }}</p>
-    <a v-bind:href="link" v-bind:data-id="dataId">Lorem</a>
-  </div>
 
-  <div id="app2">
-    <span v-if="seen">Now you can see me!</span>
-  </div>
+    <div id="app">
 
-  <script src="app.js"></script>
+        <button v-on:click="counter++">Increase</button><br>
+        <button v-on:click="counter--">Decrease</button><br>
+        <button v-on:click="reset">Reset</button>
+
+        <p>Counter: {{ counter }}</p>
+        <p>{{ result() }}</p>
+    </div>
+
+    <script src="app.js"></script>
 </body>
+
 </html>
